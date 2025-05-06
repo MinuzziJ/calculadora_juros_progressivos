@@ -1,0 +1,183 @@
+/* Importando uma fonte que todos usam pra parecerem designers sérios */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Corpo padrão para quem ainda acredita em layouts centralizados */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9; /* Branco moderno */
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+}
+
+/* Onde a mágica acontece (ou pelo menos deveria) */
+.container {
+  width: 100%;
+  max-width: 600px; /* Porque menos que isso já é punição */
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra do sucesso */
+  border-radius: 16px;
+  text-align: center;
+  transition: background-color 0.3s;
+  flex: 1;
+}
+
+/* Título padrão de sistemas que querem parecer confiáveis */
+h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+/* Separação visual obrigatória para formular mal e porcamente */
+.form-group {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Sim, precisamos dizer que o label vem antes do input */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Inputs simpáticos que só querem ser clicados */
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Botões com aquela pegada “me clique” */
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(145deg, #6a4c9c, #4e3483); /* Roxo premium */
+  color: #fff;
+}
+
+/* Porque botão que não brilha ao passar o mouse não é botão */
+button:hover {
+  background: linear-gradient(145deg, #5c3a7e, #4e3483);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Aqui sai o resultado bonito e colorido */
+#tabelaResultado {
+  margin-top: 30px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+th {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* Botão do modo noturno porque é 2025 e isso é obrigatório */
+.modo-noturno-topo {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.modo-noturno-topo button {
+  background-color: transparent;
+  color: #333;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* O lendário dark mode, porque preto é o novo branco */
+.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.dark-mode .container {
+  background-color: #1e1e1e;
+}
+
+.dark-mode input,
+.dark-mode button {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.dark-mode th {
+  background-color: #444;
+  color: #fff;
+}
+
+/* Rodapé que ninguém lê, mas todo mundo espera ver */
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #777;
+}
+
+.dark-mode footer {
+  color: #aaa;
+}
+
+/* Quando o mundo vira mobile e tudo quebra, isso salva */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  th, td {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
