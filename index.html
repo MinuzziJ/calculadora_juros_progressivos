@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- Porque não começar o dia com a tag meta charset, né? Vamos lá! -->
+  <meta charset="UTF-8" />
+  <!-- Responsividade? Claro que sim! Não queremos que ninguém precise dar zoom, né? -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CALCULADORA DE JUROS PROGRESSIVOS</title>
+  <!-- Colocando uma fonte bonita, só para ninguém reclamar do visual depois -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Aquele ícone de luz que vai brilhar na tela porque somos modernos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- O CSS aqui, porque ninguém tem paciência para ver código feio -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Aquele botão estilo "Eu também sei programar um tema escuro" -->
+  <div class="modo-noturno-topo">
+    <button onclick="alternarModoNoturno()" title="Modo Noturno">
+      <i class="fas fa-lightbulb"></i> <!-- Porque a lâmpada não tem preço! -->
+    </button>
+  </div>
+
+  <!-- A mágica começa aqui -->
+  <div class="container">
+    <h1>CALCULADORA DE JUROS PROGRESSIVOS</h1>
+
+    <!-- Porque não é só digitar, tem que pedir o nome do produto também, né? -->
+    <div class="form-group">
+      <label for="nomeProduto">NOME DO PRODUTO</label>
+      <input type="text" id="nomeProduto" placeholder="EX: Produto X" />
+    </div>
+
+    <!-- Descrição do produto, porque um nome sem descrição é um vazio na alma -->
+    <div class="form-group">
+      <label for="descricaoProduto">DESCRIÇÃO DO PRODUTO</label>
+      <input type="text" id="descricaoProduto" placeholder="EX: Produto de alta qualidade" />
+    </div>
+
+    <!-- Se você não colocar o valor à vista, já era! -->
+    <div class="form-group">
+      <label for="valorAVista">VALOR À VISTA</label>
+      <input type="number" id="valorAVista" placeholder="EX: 180" />
+    </div>
+
+    <!-- O valor total, aquele que você vai pagar no final das contas... -->
+    <div class="form-group">
+      <label for="valorTotal">TOTAL À PRAZO</label>
+      <input type="number" id="valorTotal" placeholder="EX: 320" />
+    </div>
+
+    <!-- Quantas parcelas? Se você não sabe, a calculadora também não. -->
+    <div class="form-group">
+      <label for="parcelasMaximas">NÚMERO DE PARCELAS</label>
+      <input type="number" id="parcelasMaximas" value="12" min="1" max="36" />
+    </div>
+
+    <!-- O botão para calcular, porque sem ele, nada acontece -->
+    <button onclick="calcularParcelas()">CALCULAR PARCELAS</button>
+
+    <!-- Aqui é onde o milagre acontece, a tabela vai brotar -->
+    <div id="tabelaResultado"></div>
+
+    <!-- Botões de copiar e gerar PDF... porque sempre há algo mais para fazer -->
+    <div class="button-group">
+      <button id="copiarButton" onclick="copiarTabela()" style="display:none; margin-top: 20px;">COPIAR PARCELAS</button>
+      <button id="gerarPdfButton" onclick="gerarPdf()" style="display:none; margin-top: 20px;">GERAR PDF</button>
+    </div>
+  </div>
+
+  <!-- O rodapé, que ninguém lê, mas acredite, tem algo bonito aqui -->
+  <footer class="rodape">
+    <p>Criado por <strong>Minuzzij</strong> 🚀</p>
+  </footer>
+
+  <!-- A mágica do PDF acontece aqui, porque não basta só fazer código bonito -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- E, claro, o script com toda a inteligência da coisa -->
+  <script src="script.js"></script>
+</body>
+</html>
